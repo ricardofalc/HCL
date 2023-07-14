@@ -18,6 +18,6 @@ source "azure-arm" "v" {
 
     vm_size                             = "Standard_D2s_v2"
 
-    allowed_inbound_ip_addresses        = ["145.53.216.201"] # Makes local machine able to connect to the VM to run provisioners
+    allowed_inbound_ip_addresses        = [var.allowed_inbound_ip] # Makes local machine able to connect to the VM to run provisioners
     
 }
