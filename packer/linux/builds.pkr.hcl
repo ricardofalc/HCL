@@ -1,3 +1,4 @@
+ #Launches the VM runs the provisioners and captures an image
 build {
     sources = [
         "source.azure-arm.vm"
