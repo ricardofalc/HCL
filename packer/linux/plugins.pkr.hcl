@@ -1,0 +1,4 @@
+pakcer {
+    required_plugins {
+    }
+}
