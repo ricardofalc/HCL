@@ -7,7 +7,7 @@ source "azure-arm" "v" {
 
     #Note: version management needs to be implementing for updating packages.
     location                            = "West Europe"
-    managed_image_name                  = "aztf-ubuntu"
+    managed_image_name                  = "aztf-winserver2016"
     managed_image_resource_group_name   = "rg-packer"
 
     communicator                        = "winrm"
