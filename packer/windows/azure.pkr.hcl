@@ -10,11 +10,16 @@ source "azure-arm" "v" {
     managed_image_name                  = "aztf-ubuntu"
     managed_image_resource_group_name   = "rg-packer"
 
-    communicator                        = "ssh"
-    os_type                             = "Linux"
-    image_offer                         = "0001-com-ubuntu-server-jammy"
-    image_publisher                     = "Canonical"
-    image_sku                           = "22_04-lts-gen2"
+    communicator                        = "winrm"
+    winrm_use_ssl                       = true
+    winrm_insecure                      = true
+    winrm_timeout                       = "5m"
+    winrm_username                      = "packer"
+
+    os_type                             = "Windows"
+    image_offer                         = "WindowsServer"
+    image_publisher                     = "MicrosoftWindowsServer"
+    image_sku                           = "2016-Datacenter"
 
     vm_size                             = "Standard_B1ls"
 
